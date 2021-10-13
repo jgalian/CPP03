@@ -9,7 +9,7 @@ DiamondTrap::DiamondTrap()
 	std::cout << "Default constructor of DiamondTrap " << _name << " has been called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "clap_name"), ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {
 	_maxHitPoints = FragTrap::_maxHitPoints;
 	_hitPoints = FragTrap::_hitPoints;
@@ -56,6 +56,11 @@ std::ostream &		operator << ( std::ostream & o, DiamondTrap const & i )
 void	DiamondTrap::attack(std::string const & target) const
 {
 	this->ScavTrap::attack( target );
+}
+
+void	DiamondTrap::whoAmI() const
+{
+	std::cout << "I am " << _name << " grandson of " << ClapTrap::_name << std::endl;
 }
 
 /*

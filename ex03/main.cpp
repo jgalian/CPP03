@@ -4,8 +4,8 @@
 
 int	main(void)
 {
-	ScavTrap uno("Toby");
-	FragTrap dos("Mike");
+	// ScavTrap uno("Toby");
+	// FragTrap dos("Mike");
 	DiamondTrap	tres("Johnny");
 
 	// uno.attack("Marvin");
@@ -23,6 +23,7 @@ int	main(void)
 	tres.beRepaired(15);
 	tres.guardGate();
 	tres.highFiveGuys();
+	tres.whoAmI();
 
 	return (0);
 }

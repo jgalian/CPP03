@@ -1,6 +1,6 @@
 NAME =		diamondtrap
 CC =		clang++
-CPPFLAGS =	-Wall -Wextra -Werror -c -std=c++98
+CPPFLAGS =	-Wall -Wextra -Werror -Wshadow -Wno-shadow -c -std=c++98
 SRCS =		main.cpp ScavTrap.cpp ClapTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJS =		$(SRCS:.cpp=.o)
 OBJ_PATH = 	./obj
