@@ -41,7 +41,7 @@ ClapTrap::~ClapTrap()
 
 ClapTrap &		ClapTrap::operator = ( ClapTrap const & rhs )
 {
-	std::cout << "Asignation operator overload has been called on " << _name << std::endl;
+	//std::cout << "Asignation operator overload has been called on " << _name << std::endl;
 	_name = rhs._name;
 	_hitPoints = rhs._hitPoints;
 	_energyPoints = rhs._energyPoints;

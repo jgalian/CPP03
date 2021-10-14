@@ -37,11 +37,17 @@ ScavTrap::~ScavTrap()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-// ScavTrap &		ScavTrap::operator=( ScavTrap const & rhs )
-// {
-
-// 	return *this;
-// }
+ScavTrap &		ScavTrap::operator=( ScavTrap const & rhs )
+{
+	if ( this != &rhs )
+	{
+		_maxHitPoints = rhs._maxHitPoints;
+		_hitPoints = rhs._hitPoints;
+		_energyPoints = rhs._energyPoints;
+		_attackDamage = rhs._attackDamage;
+	}
+	return *this;
+}
 
 std::ostream &	operator << ( std::ostream & o, ScavTrap const & i )
 {

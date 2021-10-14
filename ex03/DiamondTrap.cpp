@@ -37,11 +37,17 @@ DiamondTrap::~DiamondTrap()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-// DiamondTrap &		DiamondTrap::operator = ( DiamondTrap const & rhs )
-// {
-
-// 	return *this;
-// }
+DiamondTrap &		DiamondTrap::operator = ( DiamondTrap const & rhs )
+{
+	if ( this != &rhs )
+	{
+		_maxHitPoints = rhs._maxHitPoints;
+		_hitPoints = rhs._hitPoints;
+		_energyPoints = rhs._energyPoints;
+		_attackDamage = rhs._attackDamage;
+	}
+	return *this;
+}
 
 std::ostream &		operator << ( std::ostream & o, DiamondTrap const & i )
 {
